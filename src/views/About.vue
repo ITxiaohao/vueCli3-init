@@ -5,7 +5,10 @@
 </template>
 
 <script>
-import { login } from "@/api/testApi";
+import { getBanner } from "dorm/dormApi";
+
+import { login } from "door/doorApi";
+
 export default {
   data() {
     return {
@@ -13,15 +16,13 @@ export default {
       password: 123456
     };
   },
-  methods: {
-    _getBanner() {
-      login(this.userName, this.password).then(res => {
-        console.log(res);
-      });
-    }
-  },
   created() {
-    this._getBanner();
+    login(this.userName, this.password).then(res => {
+      console.log(res);
+    });
+    getBanner().then(res => {
+      console.log(res);
+    });
   }
 };
 </script>

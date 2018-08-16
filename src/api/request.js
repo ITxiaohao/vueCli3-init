@@ -4,7 +4,7 @@ axios.defaults.headers.post["Content-Type"] = "application/json;charset=UTF-8";
 
 // 创建axios实例
 const service = axios.create({
-  baseURL: "/api", // api 因为跨域代理设置了前缀标识为 api ，所以在这里要加上
+  // baseURL: "/api", // api 因为跨域代理设置了前缀标识为 api ，所以在这里要加上
   timeout: 5000 // 请求超时时间
 });
 
